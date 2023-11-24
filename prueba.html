@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      background-color: #444;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff8c00;
+    }
+
+    /* Estilos para dispositivos móviles */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      .menu-icon {
+        display: block;
+        cursor: pointer;
+        order: 1;
+      }
+
+      .menu-icon div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: background-color 0.3s;
+      }
+
+      .menu-icon:hover div {
+        background-color: #ff8c00;
+      }
+
+      .menu {
+        display: none;
+        order: 2;
+      }
+
+      .menu.show {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Menú Desplegable</h1>
+  </header>
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="menu">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.querySelector('.menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

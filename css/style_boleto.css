@@ -1,0 +1,435 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    padding: 20px 0;
+    margin: 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    text-align: justify;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #fff;
+    border-color: #454d55;
+}
+
+.table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.centers {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select, input[type="number"], input[type="radio"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+
+}
+
+
+/* Estilo personalizado para los radio buttons */
+.radio-label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #84afd8;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.radio-label:hover input[type="radio"] ~ .radio-checkmark {
+    background-color: #ddd;
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-checkmark {
+    background-color: #234ec5;
+}
+
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-label input[type="radio"]:checked ~ .radio-checkmark:after {
+    display: block;
+    border-radius: 50%;
+    background: white;
+    height: 10px;
+    width: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+a {
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Estilo para los labels e inputs de Tarjeta de débito */
+#inputTarjetaDebito label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Cambia el color del texto si es necesario */
+}
+
+#inputTarjetaDebito input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Estilo para los labels e inputs de Tarjeta de crédito */
+#inputTarjetaCredito label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Cambia el color del texto si es necesario */
+}
+
+#inputTarjetaCredito input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+/* Estilo para los labels e inputs de PayPal */
+#inputPayPal label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Cambia el color del texto si es necesario */
+}
+
+#inputPayPal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+header {
+    background-color: #026cdf;
+    color: #fff;
+    padding: 10px 0;
+    display: grid;
+    justify-content: start;
+    justify-items: start;
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+.navbar-brand img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex; /* Agregado para alinear elementos en el encabezado */
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.href-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.href-button:hover {
+    background-color: #0056b3;
+}
+
+.option-button {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Agrega estilos para subrayar letras al pasar el cursor */
+.dropdown:hover {
+    /*background-color: #0056b3; /* Cambia el color cuando el cursor está encima */
+    text-decoration: underline;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+    color: #65b0ff;
+}
+
+
+.option-button:hover {
+    color: #65b0ff;
+    text-decoration: underline;
+}
+
+.option-button:active {
+    color: #333;
+    text-decoration: underline;
+}
+
+.navbar-brand:active {
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    color: #fff; /* Cambia el color del texto cuando el cursor está encima del enlace */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor sobre el enlace */
+}
+
+/* Cambia el cursor al pasar por un enlace */
+.option-button, .href-button {
+    cursor: pointer;
+}
+
+/* Cambia el cursor al pasar por un enlace dentro de las categorías */
+.dropdown-content a {
+    cursor: pointer;
+}
+
+/* Cambia el color al dar clic en la categoría */
+.dropdown-content a:active {
+    background-color: #333;
+}
+
+/* Muestra el enlace de manera visible en la parte inferior al pasar el cursor */
+.href-button:hover::after {
+    content: "\2023"; /* Agrega un punto al final del enlace */
+    color: #f2f2f2; /* Cambia el color del punto */    
+    margin-left: 5px; /* Ajusta el espaciado */
+}
+
+
+a.href-button:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
+}
+
+a.href-button:hover:active {
+    background-color:#333;
+}
+
+.navbar-toggler {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar-toggler:hover {
+    color: #65b0ff;
+}
+
+.navbar-toggler:active {
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        display: none;
+        margin-top: 10px; /* Espacio entre cada opción */
+        position: relative;
+        margin-right: auto;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%; /* Coloca el menú desplegable debajo de la opción */
+        /*left: -60px;*/
+        width: 100%;
+    }
+
+    .navbar.active .dropdown {
+        display: block;
+    }
+
+    .option-button{
+        font-size: 16px;
+    }
+}
+
+/* Asegura que el botón se oculte en pantallas más grandes */
+@media (min-width: 769px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+}

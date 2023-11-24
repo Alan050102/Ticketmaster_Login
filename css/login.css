@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+h2 {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+.success {
+    color: green;
+}
+.error {
+    color: red;
+}
+.restriction-title {
+    font-weight: bold;
+    margin-top: 10px;
+}
+.restriction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.restriction h5 {
+    margin: 0;
+}
+.restriction ul {
+    padding-left: 10px;
+}
+label {
+    display: block;
+}
+.navbar-brand img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header {
+    background-color: #026cdf;
+    color: #fff;
+    padding: 10px 0;
+    display: flex; /* Agregado para alinear elementos en el encabezado */
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex; /* Agregado para alinear elementos en el encabezado */
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.href-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.href-button:hover {
+    background-color: #0056b3;
+}
+
+.option-button {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Agrega estilos para subrayar letras al pasar el cursor */
+.dropdown:hover {
+    /*background-color: #0056b3; /* Cambia el color cuando el cursor está encima */
+    text-decoration: underline;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+    color: #65b0ff;
+}
+
+
+.option-button:hover {
+    color: #65b0ff;
+    text-decoration: underline;
+}
+
+.option-button:active {
+    color: #333;
+    text-decoration: underline;
+}
+
+.navbar-brand:active {
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    color: #fff; /* Cambia el color del texto cuando el cursor está encima del enlace */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor sobre el enlace */
+}
+
+/* Cambia el cursor al pasar por un enlace */
+.option-button, .href-button {
+    cursor: pointer;
+}
+
+/* Cambia el cursor al pasar por un enlace dentro de las categorías */
+.dropdown-content a {
+    cursor: pointer;
+}
+
+/* Cambia el color al dar clic en la categoría */
+.dropdown-content a:active {
+    background-color: #333;
+}
+
+/* Muestra el enlace de manera visible en la parte inferior al pasar el cursor */
+.href-button:hover::after {
+    content: "\2023"; /* Agrega un punto al final del enlace */
+    color: #f2f2f2; /* Cambia el color del punto */    
+    margin-left: 5px; /* Ajusta el espaciado */
+}
+
+
+a.href-button:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
+}
+
+a.href-button:hover:active {
+    background-color:#333;
+}
+
+@media (max-width: 450px) {
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+    
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .container {
+        width: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+}
+
+input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}

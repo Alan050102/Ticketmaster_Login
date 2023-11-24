@@ -1,0 +1,260 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #026cdf;
+    color: #fff;
+    padding: 10px 0;
+    display: grid;
+    justify-content: start;
+    justify-items: start;
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex; /* Agregado para alinear elementos en el encabezado */
+    align-items: center; /* Agregado para alinear elementos verticalmente en el encabezado */
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 50px; /* Reducción del espacio entre elementos */
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    margin-top: 20px;
+}
+
+.href-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center; /* Centra verticalmente el botón */
+    padding: 20px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 250px;
+    height: 240px;
+    margin: 0 auto; /* Centra horizontalmente el botón */
+    font-size: 16px;
+}
+
+.href-button img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 100%; /* Evita que la imagen exceda el ancho del contenedor */
+    margin-bottom: 5px;
+}
+
+.href-button span {
+    margin-top: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.href-button:hover {
+    background-color: #0056b3;
+}
+
+.option-button {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Agrega un estilo para ocultar los elementos por defecto */
+@media (max-width: 768px) {
+    .navbar-expand-lg .dropdown-content {
+        display: none;
+    }
+}
+
+/* Agrega estilos para subrayar letras al pasar el cursor */
+.dropdown:hover {
+    /*background-color: #0056b3; /* Cambia el color cuando el cursor está encima */
+    text-decoration: underline;
+}
+
+.navbar-brand:hover {
+    text-decoration: underline;
+    color: #65b0ff;
+}
+
+
+.option-button:hover {
+    color: #65b0ff;
+    text-decoration: underline;
+}
+
+.option-button:active {
+    color: #333;
+    text-decoration: underline;
+}
+
+.navbar-brand:active {
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    color: #fff; /* Cambia el color del texto cuando el cursor está encima del enlace */
+    text-decoration: underline; /* Subraya el texto al pasar el cursor sobre el enlace */
+}
+
+/* Cambia el cursor al pasar por un enlace */
+.option-button, .href-button {
+    cursor: pointer;
+}
+
+/* Cambia el cursor al pasar por un enlace dentro de las categorías */
+.dropdown-content a {
+    cursor: pointer;
+}
+
+/* Cambia el color al dar clic en la categoría */
+.dropdown-content a:active {
+    background-color: #333;
+}
+
+/* Muestra el enlace de manera visible en la parte inferior al pasar el cursor */
+.href-button:hover::after {
+    content: "\2023"; /* Agrega un punto al final del enlace */
+    color: #f2f2f2; /* Cambia el color del punto */    
+    margin-left: 5px; /* Ajusta el espaciado */
+}
+
+
+a.href-button:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
+}
+
+a.href-button:hover:active {
+    background-color:#333;
+}
+
+
+.navbar-toggler {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar-toggler:hover {
+    color: #65b0ff;
+}
+
+.navbar-toggler:active {
+    color: #333;
+}
+
+
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dropdown {
+        display: none;
+        margin-top: 10px; /* Espacio entre cada opción */
+        position: relative;
+        margin-right: auto;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%; /* Coloca el menú desplegable debajo de la opción */
+        /*left: -60px;*/
+        width: 100%;
+    }
+
+    .navbar.active .dropdown {
+        display: block;
+    }
+
+    .option-button{
+        font-size: 16px;
+    }
+}
+
+/* Asegura que el botón se oculte en pantallas más grandes */
+@media (min-width: 769px) {
+    .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 25px;
+    }
+    
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .href-button {
+        max-width: 220px;
+        height: 240px;
+    }
+}

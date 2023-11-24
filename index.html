@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketmaster</title>
+    <link rel="shortcut icon" href="Resource/Logo.png">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <header>
+        <a class="navbar-brand" href="index.html">
+            <img src="Resource/Logo.png" width="45" height="40" alt="Ticketmaster Logo">
+            Ticketmaster
+        </a>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="dropdown">
+                    <a href="usuario.html" class="option-button">Crear Usuario</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <div class="container">
+        <h2>Inicio de Sesión</h2>
+        <form action="php/login.php" id="loginForm" method="POST">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" name="iniciar_sesion" value="Iniciar Sesión">
+        </form>
+        <p id="mensaje"></p>
+    </div>
+
+    <script src="js/login.js"></script>
+    
+</body>
+</html>
